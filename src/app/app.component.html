@@ -1,0 +1,27 @@
+<header>
+  <h2>MediaCapture, MediaRecorder and Streams API</h2>
+</header>
+<main>
+  <div>
+    <button #startCam (click)="onStartCamera()" class="btn btn-primary">
+      Start Camera
+    </button>
+    <button #btnStart class="btn btn-success">START RECORDING</button>
+    <button #btnStop class="btn btn-danger">STOP RECORDING</button>
+    <button (click)="clearRecording()" class="btn btn-secondary">
+      Clear Recording
+    </button>
+  </div>
+  <div class="container">
+    <h4>{{ recordMsg }}</h4>
+  </div>
+
+  <div class="row">
+    <div class="col">
+      <video controls #myVideoElement></video>
+    </div>
+    <div class="col">
+      <video #vid2 controls></video>
+    </div>
+  </div>
+</main>
